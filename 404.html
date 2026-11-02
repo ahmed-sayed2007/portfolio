@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Page not found | Ahmed Sayed Ebrahim</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05060A">
+<link rel="icon" href="/portfolio/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Geist:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/portfolio/styles.css">
+</head>
+<body>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<main class="nf" id="main">
+  <div>
+    <p class="eyebrow">Error 404</p>
+    <h1 class="grad">404</h1>
+    <p>This page drifted out of orbit. Let's get you back to the portfolio.</p>
+    <a class="btn primary big" href="/portfolio/"><span>BACK TO HOME</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</main>
+<script>
+(function(){var cv=document.getElementById("bgCanvas"),c=cv.getContext("2d");if(matchMedia("(prefers-reduced-motion: reduce)").matches){cv.style.display="none";return}
+var W,H,P=[];function fit(){W=cv.width=innerWidth;H=cv.height=innerHeight}fit();addEventListener("resize",fit);
+for(var i=0;i<50;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3});
+(function t(){c.clearRect(0,0,W,H);P.forEach(function(p){p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;c.fillStyle="rgba(160,185,255,.6)";c.beginPath();c.arc(p.x,p.y,1.4,0,6.3);c.fill()});requestAnimationFrame(t)})()})();
+</script>
+</body>
+</html>
