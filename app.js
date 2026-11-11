@@ -47,6 +47,7 @@
     github: '<g transform="translate(5 5) scale(1.875)" fill="currentColor" stroke="none"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></g>',
     figma: '<path d="M15.5 6a4.5 4.5 0 000 9H20V6zM20 6h4.5a4.5 4.5 0 010 9H20zM15.5 15a4.5 4.5 0 000 9H20v-9zM24.5 15a4.5 4.5 0 110 9 4.5 4.5 0 010-9zM15.5 24a4.5 4.5 0 104.5 4.5V24z"/>',
     api: '<path d="M8 13h10a4 4 0 010 8H8M32 27H22a4 4 0 010-8h10M14 13V9M26 31v-4"/><circle cx="14" cy="8" r="1.500" fill="currentColor"/><circle cx="26" cy="32" r="1.500" fill="currentColor"/>',
+    phone: '<path d="M13 7h5l2 7-3.500 2a15 15 0 007 7l2-3.500 7 2v5a3 3 0 01-3 3C17 30 10 23 10 10a3 3 0 013-3z"/>',
     mail: '<rect x="5" y="9" width="30" height="22" rx="4"/><path d="M6 12l14 11 14-11"/>',
     linkedin: '<rect x="6" y="6" width="28" height="28" rx="6"/><path d="M13 17v10M13 12.500v.1M19 27V17M19 21c0-3 2-4.200 4-4.200s4 1.200 4 4.200v6"/>',
     instagram: '<rect x="6" y="6" width="28" height="28" rx="9"/><circle cx="20" cy="20" r="6.500"/><circle cx="28" cy="12" r="1.200" fill="currentColor"/>'
@@ -58,7 +59,7 @@
   function render() {
     $("#stats").innerHTML = (S.stats || []).map(function (s) {
       var v = s.from === "projects" ? S.projects.length : s.from === "tech" ? S.tech.length : s.value;
-      return '<div class="rv" data-reveal><div class="stat glass" data-tilt><b data-count="' + v + '">' + v + '</b><span>' + esc(s.label) + '</span></div></div>';
+      return '<div class="rv" data-reveal><div class="stat glass" data-tilt><b data-count="' + v + '"' + (s.suffix ? ' data-suf="' + esc(s.suffix) + '"' : "") + '>' + v + '</b><span>' + esc(s.label) + '</span></div></div>';
     }).join("");
     $("#aboutCards").innerHTML = (S.about || []).map(function (c) {
       return '<div class="rv" data-reveal><article class="card glass" data-tilt><em>' + esc(c.k) + '</em><h3>' + esc(c.v) + '</h3><p>' + esc(c.s) + '</p></article></div>';
@@ -97,6 +98,7 @@
     soc.push('<li><a href="' + esc(L.github) + '" target="_blank" rel="noopener">' + svg("github") + 'GitHub</a></li>');
     if (L.linkedin) soc.push('<li><a href="' + esc(L.linkedin) + '" target="_blank" rel="noopener">' + svg("linkedin") + 'LinkedIn</a></li>');
     if (L.instagram) soc.push('<li><a href="' + esc(L.instagram) + '" target="_blank" rel="noopener">' + svg("instagram") + 'Instagram</a></li>');
+    if (L.phone) soc.push('<li><a href="tel:+2' + esc(L.phone) + '">' + svg("phone") + esc(L.phone) + '</a></li>');
     if (L.email) soc.push('<li><a href="mailto:' + esc(L.email) + '">' + svg("mail") + esc(L.email) + '</a></li>');
     $("#socials").innerHTML = soc.join("");
     $$(".menu-nav a").forEach(function (a, i) { a.style.setProperty("--i", i); });

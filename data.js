@@ -12,15 +12,16 @@ window.SITE = {
   url: "https://ahmed-sayed2007.github.io/portfolio/",
   links: {
     github: "https://github.com/ahmed-sayed2007",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/ahmed-sayed-717287357/",
     instagram: "",
-    email: ""
+    email: "ebrahems868@gmail.com",
+    phone: "01557925251"
   },
   formEndpoint: "",
 
   stats: [
     { from: "projects", label: "Featured projects" },
-    { value: 8, label: "Months of front-end training" },
+    { value: 20, suffix: "+", label: "Projects built at Route Academy" },
     { from: "tech", label: "Technologies in my toolkit" }
   ],
 
@@ -53,7 +54,7 @@ window.SITE = {
       description: "A planning app for exploring meals, reading nutrition facts and logging what you eat, with barcode product lookup and a clean data-driven interface.",
       tech: ["HTML", "CSS", "JavaScript", "API integration", "SweetAlert2", "Plotly"],
       repo: "https://github.com/ahmed-sayed2007/JS-exam",
-      live: "", image: "", hue: 262, mono: "Np"
+      live: "https://ahmed-sayed2007.github.io/JS-exam/", image: "assets/projects/nutriplan.webp", hue: 262, mono: "Np"
     },
     {
       title: "Fresh Cart",
@@ -61,7 +62,7 @@ window.SITE = {
       description: "A modern storefront built with Next.js and TypeScript: product browsing, cart and wishlist, authentication with protected routes, validated forms and a checkout flow.",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NextAuth", "React Hook Form", "Zod"],
       repo: "https://github.com/ahmed-sayed2007/fresh-cart",
-      live: "https://e-commerce-kappa-inky-13.vercel.app", image: "", hue: 214, mono: "Fc"
+      live: "https://fresh-cart-kwbd.vercel.app/", image: "assets/projects/freshcart.webp", hue: 214, mono: "Fc"
     },
     {
       title: "LinkedPost",
@@ -69,7 +70,7 @@ window.SITE = {
       description: "A social feed built with React and TypeScript: sign up and log in, browse posts, open post details, comment, like and update your profile photo.",
       tech: ["React", "TypeScript", "Tailwind CSS", "TanStack Query", "Axios", "React Router", "React Hook Form", "Zod"],
       repo: "https://github.com/ahmed-sayed2007/social-APP",
-      live: "", image: "", hue: 236, mono: "Lp"
+      live: "https://social-app-qann.vercel.app/", image: "assets/projects/linkedpost.webp", hue: 236, mono: "Lp"
     },
     {
       title: "EliteHomes",
@@ -77,15 +78,15 @@ window.SITE = {
       description: "A responsive real estate landing page that focuses on structure, layout, styling and interactive front-end behaviour, built with Bootstrap.",
       tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
       repo: "https://github.com/ahmed-sayed2007/exam-bootstrap",
-      live: "", image: "", hue: 285, mono: "Eh"
+      live: "https://ahmed-sayed2007.github.io/exam-bootstrap/", image: "assets/projects/elitehomes.webp", hue: 285, mono: "Eh"
     }
   ],
 
   journey: [
     { when: "Feb 2026", title: "Front-end diploma begins", text: "Started the Front-End Development Diploma at Route Academy.", tag: "Start" },
-    { when: "Foundations", title: "Core web skills", text: "HTML5, CSS3, JavaScript, Bootstrap, responsive layouts and working with REST APIs.", tag: "Learning" },
+    { when: "Foundations", title: "Core web skills", text: "HTML5, CSS3, JavaScript, Bootstrap, responsive layouts and working with REST APIs, through more than 20 hands-on projects.", tag: "Learning" },
     { when: "Modern stack", title: "React, TypeScript and Next.js", text: "Component architecture, state management, forms, validation and authentication. Fresh Cart is deployed on Vercel.", tag: "Milestone" },
-    { when: "Sep 2026", title: "End of the diploma program", text: "Four featured projects built along the way, from vanilla JavaScript to a full Next.js application.", tag: "Milestone" },
+    { when: "Sep 2026", title: "End of the diploma program", text: "More than 20 projects built during the diploma; four are featured here, from vanilla JavaScript to a full Next.js application.", tag: "Milestone" },
     { when: "2027 / 2028", title: "Expected graduation", text: "Continuing formal studies while building and learning in public.", tag: "Next" },
     { when: "Now", title: "Looking for a first role", text: "Open to internships, junior positions, freelance work and collaborations.", tag: "Open", now: true }
   ],
